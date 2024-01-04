@@ -1,13 +1,182 @@
 body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+  background-color: #c2c2d6;
+
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+.App {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
 }
+
+.calculator {
+  border: 2px solid #47476b;
+  padding: 5px;
+  background-color: black;
+  width: 320px;
+  position: relative;
+  
+}
+
+.inputScreen {
+  width: 320px;
+  min-height: 20px; 
+  font-size: 29px;
+  color: yellow;
+  text-align: right;
+}
+
+#display {
+  width: 320px;
+  min-height: 20px; 
+  font-size: 20px;
+  color: white;
+  text-align: right;
+}
+
+#clear {
+  background-color: red;
+  color: white;
+  height: 65px;
+  width: 160px;
+  font-size: 20px;
+  
+}
+
+#divide {
+  background-color: rgb(102, 102, 102);
+  color: white;
+  height: 65px;
+  width: 80px;
+  font-size: 20px;
+  
+}
+
+#multiply {
+  background-color: rgb(102, 102, 102);
+  color: white;
+  height: 65px;
+  width: 80px;
+  font-size: 20px;
+  
+}
+
+#subtract {
+  background-color: rgb(102, 102, 102);
+  color: white;
+  height: 65px;
+  width: 80px;
+  font-size: 20px;
+  
+}
+
+#add {
+  background-color: rgb(102, 102, 102);
+  color: white;
+  height: 65px;
+  width: 80px;
+  font-size: 20px;
+  
+}
+
+#seven {
+  color: white;
+  background-color: #4d4d4d;
+  width: 80px;
+  height: 65px;
+  font-size: 20px;
+  
+}
+
+#eight {
+  color: white;
+  background-color: #4d4d4d;
+  width: 80px;
+  height: 65px;
+  font-size: 20px;
+}
+
+#nine {
+  color: white;
+  background-color: #4d4d4d;
+  width: 80px;
+  height: 65px;
+  font-size: 20px;
+}
+
+#four{
+  color: white;
+  background-color: #4d4d4d;
+  width: 80px;
+  height: 65px;
+  font-size: 20px;
+}
+
+#five{
+  color: white;
+  background-color: #4d4d4d;
+  width: 80px;
+  height: 65px;
+  font-size: 20px;
+}
+
+#six {
+  color: white;
+  background-color: #4d4d4d;
+  width: 80px;
+  height: 65px;
+  font-size: 20px;
+}
+
+#one {
+  color: white;
+  background-color: #4d4d4d;
+  width: 80px;
+  height: 65px;
+  font-size: 20px;
+}
+
+#two {
+  color: white;
+  background-color: #4d4d4d;
+  width: 80px;
+  height: 65px;
+  font-size: 20px;
+}
+
+#three {
+  color: white;
+  background-color: #4d4d4d;
+  width: 80px;
+  height: 65px;
+  font-size: 20px;
+}
+
+#zero {
+  color: white;
+  background-color: #4d4d4d;
+  width: 160px;
+  height: 65px;
+  font-size: 20px;
+}
+
+#decimal {
+  color: white;
+  background-color: #4d4d4d;
+  width: 80px;
+  height: 65px;
+  font-size: 20px;
+}
+
+#equals {
+  background-color: rgb(0, 68, 108);
+  color: white;
+  width: 80px;
+  height: 130px;
+  font-size: 20px;
+  position: absolute;
+  bottom: 5px;
+}
+
+
