@@ -11,35 +11,46 @@ const App = () => {
   };
 
   const handleEqualsClick = () => {
-    // try {
-    //   const result = eval(input);
-    //   setOutput(result.toString());
-    //   setInput(result.toString());
-    // } catch (error) {
-    //   setOutput('Error');
-    // }
 
     if (String(input).slice(-2) === '+-' || String(input).slice(-2) === '--' || String(input).slice(-2) === '*-' || String(input).slice(-2) === '/-') {
-      const res = math.evaluate(String(input).slice(0, -2));
-      setOutput(res);
-      setInput(res);
-    } else if (String(input).slice(-1) === '+' || String(input).slice(-1) === '-' || String(input).slice(-1) === '*' || String(input).slice(-1) === '/') {
+      const expression = String(input).slice(0, -2); 
+      console.log('Expression:', expression); 
+
       try {
-        const res = math.evaluate(String(input).slice(0, -1));
-        setOutput(res);
-        setInput(res);
+        const res = math.evaluate(expression); 
+        setOutput(String(res)); 
+        setInput(String(res)); 
       } catch (error) {
-        setOutput('Error');
+        console.error('Error evaluating expression:', error); 
+        setOutput('Error'); 
       }
-    } else {
+    } else if (String(input).slice(-1) === '+' || String(input).slice(-1) === '-' || String(input).slice(-1) === '*' || String(input).slice(-1) === '/') {
+      const expression = String(input).slice(0, -1); 
+      console.log('Expression:', expression); 
+
       try {
-        const res = math.evaluate(input);
-        setOutput(res);
-        setInput(res);
+        const res = math.evaluate(expression); 
+        setOutput(String(res)); 
+        setInput(String(res)); 
       } catch (error) {
-        setOutput('Error');
+        console.error('Error evaluating expression:', error); 
+        setOutput('Error'); 
       }
       
+    } else {
+
+      const expression = input;
+      console.log('Expression:', expression); 
+
+      try {
+        const res = math.evaluate(expression); 
+        setOutput(String(res)); 
+        setInput(String(res));
+      } catch (error) {
+        console.error('Error evaluating expression:', error); 
+        setOutput('Error'); 
+      }
+       
     }
 
     
@@ -49,7 +60,7 @@ const App = () => {
     setInput(input + value);
     const number = String(input).match(/\d+$/);
     if (number) {
-      setOutput(number + value);
+      setOutput(String(number) + value);
     } else {
       setOutput(value);
     }
